@@ -32,12 +32,12 @@ class Saved extends Component {
 
   render() {
     return (
-      <Container>
+      <Container backgroundImage="../assets/images/rollingsPass.jpeg">
         <Row>
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>(React) Mtn Bike Project Trails Search</strong>
+                <strong>Mtn Bike Project Trails Search</strong>
               </h1>
               <h2 className="text-center">Search for and Save Trails of Interest.</h2>
             </Jumbotron>

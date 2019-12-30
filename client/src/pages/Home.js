@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Form from "../components/Form";
-import Trail from "../components/Trail";
+// import Trail from "../components/Trail";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
+
 
 class Home extends Component {
   state = {
@@ -47,12 +48,12 @@ class Home extends Component {
 
     API.saveTrail({
       mtnBikeProjectId: trail.id,
-      title: trail.volumeInfo.title,
-      subtitle: trail.volumeInfo.subtitle,
-      link: trail.volumeInfo.infoLink,
-      authors: trail.volumeInfo.authors,
-      description: trail.volumeInfo.description,
-      image: trail.volumeInfo.imageLinks.thumbnail
+      // title: trail.volumeInfo.title,
+      // subtitle: trail.volumeInfo.subtitle,
+      // link: trail.volumeInfo.infoLink,
+      // authors: trail.volumeInfo.authors,
+      // description: trail.volumeInfo.description,
+      // image: trail.volumeInfo.imageLinks.thumbnail
     }).then(() => this.getTrails());
   };
 
@@ -63,7 +64,7 @@ class Home extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>(React) Mtn Bike Project Trails Search</strong>
+                <strong>Mtn Bike Project Trails Search</strong>
               </h1>
               <h2 className="text-center">Search for and Save Trails of Interest.</h2>
             </Jumbotron>
@@ -86,12 +87,12 @@ class Home extends Component {
                   {this.state.trails.map(trail => (
                     <trail
                       key={trail.id}
-                      title={trail.volumeInfo.title}
-                      subtitle={trail.volumeInfo.subtitle}
-                      link={trail.volumeInfo.infoLink}
-                      authors={trail.volumeInfo.authors.join(", ")}
-                      description={trail.volumeInfo.description}
-                      image={trail.volumeInfo.imageLinks.thumbnail}
+                      // title={trail.volumeInfo.title}
+                      // subtitle={trail.volumeInfo.subtitle}
+                      // link={trail.volumeInfo.infoLink}
+                      // authors={trail.volumeInfo.authors.join(", ")}
+                      // description={trail.volumeInfo.description}
+                      // image={trail.volumeInfo.imageLinks.thumbnail}
                       Button={() => (
                         <button
                           onClick={() => this.handleTrailSave(trail.id)}

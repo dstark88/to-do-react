@@ -10,7 +10,7 @@ module.exports = {
   findAll: function(req, res) {
     const { query: params } = req;
     axios
-      .get("https://www.mtnBikeProjectapis.com/trails/v1/volumes", {
+      .get("https://www.mtbproject.com/data/get-trails?lat=39.869047&lon=-105.178361&maxDistance=30&key=200137695-78dc08c29366ebb65aa2aabcfcc41235", {
         params
       })
       .then(results =>
